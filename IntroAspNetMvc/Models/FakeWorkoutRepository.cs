@@ -33,9 +33,5 @@ namespace IntroAspNetMvc.Models
                 Location = "buiten"
             }
         }.AsQueryable<Workout>();
-
-        public IQueryable<Workout> EnrolledWorkouts(int id) {
-            throw new NotImplementedException();
-        }
     }
 }
