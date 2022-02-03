@@ -1,7 +1,12 @@
+using IntroAspNetMvc.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Add the WorkoutRepository to the container.
+builder.Services.AddTransient<IWorkoutRepository, JsonWorkoutRepository>();
 
 var app = builder.Build();
 
