@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 // Add the WorkoutRepository to the container.
-builder.Services.AddTransient<IWorkoutRepository, JsonWorkoutRepository>();
+builder.Services.AddTransient<IWorkoutRepository, FakeWorkoutRepository>();
 
 var app = builder.Build();
 
